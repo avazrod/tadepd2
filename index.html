@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSW</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="all.min.css">
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="nav-scroll.js"></script>
+    <script defer src="gallery.js"></script>
+    <script defer src="goTopBtn.js"></script>
+    <script defer src="popover.js"></script>
+    <script defer src="tooltip.js"></script>
+    <script defer src="kitFontAwesome.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-root-margin="0px 0px -40%" tabindex="0">
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-cream" id="navbar-example">
+            <div class="container">
+                <a class="navbar-brand me-auto" href="#"><i class="fa-solid fa-mug-hot"></i> GSW</a>
+                <div class="offcanvas offcanvas-end bg-cream" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><i class="fa-solid fa-mug-hot"></i> GSW
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body position-relative">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#aboutUs">Sobre nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#services">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#flavors">Perfiles de sabor</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu bg-cream">
+                                    <li><a class="dropdown-item" href="#faq">Preguntas frecuentes</a></li>
+                                    <li><a class="dropdown-item" href="#gallery">Galería</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="nav-social d-lg-none align-self-center py-3">
+                            <a href="https://www.facebook.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Síguenos en Facebook" data-bs-custom-class="custom-tooltip-nav">
+                                <i class="fa-brands fa-square-facebook px-2 fs-2"></i>
+                            </a>
+                            <a href="https://www.instagram.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Síguenos en Instagram" data-bs-custom-class="custom-tooltip-nav">
+                                <i class="fa-brands fa-instagram px-2 fs-2"></i>
+                            </a>
+                            <a href="https://www.youtube.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Suscríbete a nuestro canal de YouTube"
+                                data-bs-custom-class="custom-tooltip-nav">
+                                <i class="fa-brands fa-youtube px-2 fs-2"></i>
+                            </a>
+                            <a href="https://es.linkedin.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Conéctate con nosotros en LinkedIn"
+                                data-bs-custom-class="custom-tooltip-nav">
+                                <i class="fa-brands fa-linkedin px-2 fs-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="login-button">Login</a>
+                <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- CAROUSEL DE IMÁGENES -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <img src="img/pexels-marta-dzedyshko-2013798.jpeg" class="d-block w-100"
+                        alt="Imagen 1 del carousel">
+                    <div class="carousel-caption">
+                        <h5>El Arte de la Barista</h5>
+                        <p>Los baristas transforman los granos de café de especialidad en obras maestras líquidas,
+                            asegurando que cada sorbo sea perfecto</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="img/pexels-arshad-sutar-1749303.jpeg" class="d-block w-100" alt="Imagen 2 del carousel">
+                    <div class="carousel-caption">
+                        <h5>Del Cultivo a la Taza</h5>
+                        <p>Cada grano de café de especialidad cuenta una historia única, empezando por su cuidadoso
+                            cultivo
+                            en tierras fértiles</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="img/nathan-dumlao-6VhPY27jdps-unsplash.jpeg" class="d-block w-100"
+                        alt="Imagen 3 del carousel">
+                    <div class="carousel-caption">
+                        <h5>Unidos por la Pasión</h5>
+                        <p>Más que un lugar para tomar café, las cafeterías de especialidad son espacios donde la
+                            comunidad
+                            se reúne para compartir su pasión por el café de calidad</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-root-margin="0px 0px -40%" tabindex="0">
+            <!-- INTRODUCCIÓN GSW -->
+            <section id="aboutUs">
+                <div class="aboutUs wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mb-2 text-content text-center w-50 mx-auto pt-1" id="intro">
+                                <h2 class="p-4 fs-2 border-top border-3">Explora la Esencia de <span
+                                        class="green">Green</span><span class="soft">Soft</span><span
+                                        class="wild">Wild</span>
+                                </h2>
+                                <p class="p-3 fs-4">En el corazón de nuestra pasión por el café de especialidad yace
+                                    esta
+                                    filosofía que guía cada
+                                    paso de nuestro viaje desde las remotas plantaciones hasta su taza</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-4 col-sm-12 col-12 p-sm-0 card-banner">
+                                <div class="card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="img/raghavendra-prasad-53N0w0Mlx_I-unsplash.jpg" alt="Imagen Green"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h2>GREEN</h2>
+                                        <p>Refleja nuestro profundo compromiso con la sostenibilidad y el respeto por el
+                                            planeta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 p-sm-0 card-banner">
+                                <div class="card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="img/eugen-fi0zDeXsV6c-unsplash.jpg" alt="Imagen Soft"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h2>SOFT</h2>
+                                        <p>Nos lleva a través de la sutileza y riqueza de sabores que definen cada
+                                            selección
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 p-sm-0 card-banner">
+                                <div class="card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="img/tyler-nix-jE-27l7V3NU-unsplash.jpg" alt="Imagen Wild"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h2>WILD</h2>
+                                        <p>Invita a descubrir cafés excepcionales
+                                            de rincones no explorados del
+                                            mundo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICIOS -->
+            <section id="services">
+                <div class="services wrapper">
+                    <div class="col-12 mb-2 text-content text-center w-50 mx-auto pt-1" id="intro-services">
+                        <h2 class="p-4 fs-2 border-top border-3">Servicios exclusivos en el Mundo del Café
+                        </h2>
+                        <p class="p-3 fs-4">Sumérgete en la esencia del café de especialidad con nuestros servicios
+                            únicos
+                        </p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                        <div class="flip-card col">
+                            <div class="card mb-4 flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/ser-1.png" alt="Arte Líquido">
+                                    <div class="card-body">
+                                        <p>Arte Líquido</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back text-center">
+                                    <h2>Purificación del Aroma</h2>
+                                    <p>Nuestra técnica especial de preparación eleva el café a una experiencia sensorial
+                                        única,
+                                        capturando la esencia pura de cada grano</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card col">
+                            <div class="card mb-4 flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/ser-2.png" alt="Sabor Profundo">
+                                    <div class="card-body">
+                                        <p>Sabor Profundo</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back text-center">
+                                    <h2>Esencia Profunda</h2>
+                                    <p>Cada sorbo revela la complejidad y profundidad del café más puro, cuidadosamente
+                                        seleccionado y servido en su estado más natural</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card col">
+                            <div class="card mb-4 flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/ser-3.png" alt="Placer Móvil">
+                                    <div class="card-body">
+                                        <p>Placer Móvil</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back text-center">
+                                    <h2>Calidad en Movimiento</h2>
+                                    <p>Nuestro café para llevar mantiene
+                                        su pureza y sabor excepcional, para que nunca tengas que conformarte con menos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card col">
+                            <div class="card mb-4 flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/ser-4.png" alt="Origen Puro">
+                                    <div class="card-body">
+                                        <p>Origen Puro</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back text-center">
+                                    <h2>Viaje al Origen</h2>
+                                    <p>Directamente desde las fincas a tu taza, nuestros granos cuentan la historia de
+                                        su
+                                        origen
+                                        con cada taza preparada, ofreciendo un sabor inigualable y auténtico</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PERFILES DE SABOR -->
+            <section class="flavors" id="flavors">
+                <div class="container wrapper">
+                    <div class="row">
+                        <div class="col-12 mb-2 text-content text-center w-50 mx-auto pt-1" id="intro-flavors">
+                            <h2 class="p-4 fs-2 border-top border-3">Descubre Nuestros Perfiles de Sabor Únicos
+                            </h2>
+                            <p class="p-3 fs-4">Explora los perfiles de sabor de nuestro café, desde frutales a
+                                salados, y descubre la profundidad de cada sorbo
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-30px">
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/about.png" alt="Cítrico Vibrante" data-bs-toggle="popover"
+                                    data-bs-trigger="focus" tabindex="0" data-bs-placement="top"
+                                    data-bs-title="Cítrico Vibrante"
+                                    data-bs-content="Origen: Colombia. Perfecto para un refrescante cold brew"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Ácido</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Nuestro <span class="flavor">Cítrico Vibrante</span>
+                                        cautivará
+                                        tus sentidos con sus
+                                        vibrantes y chispeantes notas de frutas cítricas. Es la elección perfecta para
+                                        energizar tu día con frescura y sabor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/c1.png" alt="Amanecer Dulzón" data-bs-toggle="popover"
+                                    data-bs-trigger="focus" tabindex="0" data-bs-placement="top"
+                                    data-bs-title="Amanecer Dulzón"
+                                    data-bs-content="Origen: Brasil. Resalta en lattes y capuchinos"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Dulce</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Embárcate en un viaje de indulgencia con <span
+                                            class="flavor">Amanecer Dulzón</span>, una
+                                        fusión perfecta de
+                                        caramelo y vainilla. Ideal para esos momentos que necesitas un toque dulce</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/c2.png" alt="Intensidad Oscura" data-bs-toggle="popover"
+                                    data-bs-trigger="focus" tabindex="0" data-bs-placement="top"
+                                    data-bs-title="Intensidad Oscura"
+                                    data-bs-content="Origen: Etiopía. Ideal para amantes del espresso fuerte"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Amargo</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Descubre la intensidad de <span class="flavor">Intensidad
+                                            Oscura</span>, con su profundo y
+                                        rico perfil. Este
+                                        café es para los verdaderos conocedores que aman un sabor robusto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-30px">
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/c3.png" alt="Océano Salado" data-bs-toggle="popover"
+                                    data-bs-trigger="focus" tabindex="0" data-bs-placement="top"
+                                    data-bs-title="Océano Salado"
+                                    data-bs-content="Origen: Costa Rica. Su toque salino complementa postres de chocolate"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Salado</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Explora la singularidad de <span class="flavor">Océano
+                                            Salado</span>, donde un sutil toque
+                                        salino realza su
+                                        riqueza. Una experiencia gustativa única para paladares aventureros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/dreamy-flatwhite-coffee-with-perfect-latte-art-1.webp" alt="Secreto Umami"
+                                    data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"
+                                    data-bs-placement="top" data-bs-title="Secreto Umami"
+                                    data-bs-content="Origen: Indonesia. Marida a la perfección con quesos maduros"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Umami</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Nuestro <span class="flavor">Secreto Umami</span> ofrece un
+                                        perfil de sabor redondo y
+                                        satisfactorio, con notas
+                                        terrosas que deleitan. Perfecto para quienes buscan una taza equilibrada y plena
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 py-md-0">
+                            <div class="card">
+                                <img src="img/photo-1461023058943-07fcbe16d735.avif" alt="Jardín Frutal"
+                                    data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"
+                                    data-bs-placement="top" data-bs-title="Jardín Frutal"
+                                    data-bs-content="Origen: Kenia. Perfecto acompañante de postres de frutas"
+                                    data-bs-custom-class="custom-popover">
+                                <div class="card-body">
+                                    <h3 class="text-center">Frutal</h3>
+                                    <hr class="mt-1">
+                                    <p class="text-center">Sé testigo del espectro de sabor de <span
+                                            class="flavor">Jardín
+                                            Frutal</span>, donde cada
+                                        sorbo es una
+                                        celebración de la frescura. Ideal para descubrir la alegría de los sabores
+                                        naturales
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PREGUNTAS FRECUENTES -->
+            <section id="faq">
+                <div class="container wrapper">
+                    <div class="row">
+                        <div class="col-12 mb-2 text-content text-center w-50 mx-auto pt-1" id="intro-faq">
+                            <h2 class="p-4 fs-2 border-top border-3">Preguntas Frecuentes
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="img/istockphoto-1142411258-612x612.jpg" class="img-fluid mb-4 mt-3"
+                                alt="Preparación del café">
+                            <p class="text-center mb-4">Bienvenido al fascinante mundo del café de especialidad.
+                                Descubre a
+                                continuación las respuestas a algunas de las preguntas más frecuentes que nos hacen
+                                nuestros
+                                clientes, y sumérgete en el arte y la ciencia detrás de tu taza de café diaria</p>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6 mt-3 mt-sm-3 mt-md-0">
+                            <div class="accordion accordion-flush mt-3" id="accordionFlushExample">
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            ¿Qué es el café de especialidad?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">El café de especialidad se refiere a granos de alta
+                                            calidad que han sido cuidadosamente seleccionados y procesados, ofreciendo
+                                            perfiles de sabor únicos y distintivos. Se destaca por su trazabilidad y por
+                                            cumplir con estándares elevados durante todo el proceso de producción.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            ¿Cómo puedo preparar el café perfecto en casa?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">La preparación del café perfecto comienza con granos
+                                            de
+                                            calidad y un molido adecuado para tu método de extracción preferido. Utiliza
+                                            agua purificada a una temperatura entre 90°C y 96°C y experimenta con las
+                                            proporciones hasta encontrar tu sabor ideal.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            ¿Cómo puedo conservar mejor mi café?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Para preservar la frescura de tu café, guárdalo en
+                                            un
+                                            recipiente hermético a temperatura ambiente y lejos de la luz directa del
+                                            sol.
+                                            Evita el refrigerador, ya que la humedad puede afectar la calidad de los
+                                            granos.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            ¿De dónde provienen nuestros granos de café?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Nuestros granos provienen de granjas selectas
+                                            alrededor
+                                            del mundo, incluyendo países reconocidos por su excelencia en café como
+                                            Colombia, Etiopía, y Brasil. Cada región aporta sabores únicos y
+                                            distintivos,
+                                            reflejando las características particulares de su terroir.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive">
+                                            ¿Qué hace único al café de especialidad comparado con el café comercial?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">A diferencia del café comercial, el café de
+                                            especialidad
+                                            se somete a un proceso de selección más riguroso, enfocado en la calidad, el
+                                            sabor y la sostenibilidad. Esto garantiza una experiencia de degustación
+                                            superior, con perfiles de sabor más complejos y variados.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                            aria-expanded="false" aria-controls="flush-collapseSix">
+                                            ¿Cómo afecta el método de procesamiento al sabor del café?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">El método de procesamiento, ya sea lavado, natural o
+                                            honey, tiene un impacto significativo en el sabor final del café. Los
+                                            métodos
+                                            lavados tienden a producir un café más limpio y con mayor acidez, mientras
+                                            que
+                                            los naturales ofrecen sabores más frutales y dulces.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven"
+                                            aria-expanded="false" aria-controls="flush-collapseSeven">
+                                            ¿Puedo visitar su cafetería y ver el proceso de tostado?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">¡Por supuesto! Nos encanta compartir nuestra pasión
+                                            por
+                                            el café. Ofrecemos visitas guiadas por nuestra cafetería y tostador, donde
+                                            podrás aprender más sobre el proceso de tostado y probar nuestros cafés.
+                                            Consulta nuestro sitio web o contáctanos para más información y reservas.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseEight"
+                                            aria-expanded="false" aria-controls="flush-collapseEight">
+                                            ¿Ofrecen opciones de café para personas con restricciones dietéticas?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseEight" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Sí, ofrecemos una variedad de opciones que se
+                                            adaptan a
+                                            diferentes necesidades y preferencias dietéticas, incluyendo alternativas de
+                                            leche vegetal y cafés descafeinados. Nuestro objetivo es asegurar que todos
+                                            puedan disfrutar de una excelente taza de café.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALERÍA -->
+            <section id="gallery" class="gallery min-vh-100">
+                <div class="container-lg wrapper">
+                    <div class="col-12 mb-2 text-content text-center w-50 mx-auto pt-1 mb-4" id="intro-gallery">
+                        <h2 class="p-4 fs-2 border-top border-3">Nuestra <span>Galería</span>
+                        </h2>
+                    </div>
+                    <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                        <div class="col">
+                            <img src="img/image1.png" class="gallery-item" alt="gallery">
+                        </div>
+                        <div class="col">
+                            <img src="img/image2.png" class="gallery-item" alt="gallery">
+                        </div>
+                        <div class="col">
+                            <img src="img/image3.png" class="gallery-item" alt="gallery">
+                        </div>
+                        <div class="col">
+                            <img src="img/image4.png" class="gallery-item" alt="gallery">
+                        </div>
+                        <div class="col">
+                            <img src="img/image5.png" class="gallery-item" alt="gallery">
+                        </div>
+                        <div class="col">
+                            <img src="img/image6.png" class="gallery-item" alt="gallery">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/image1.png" class="modal-img" alt="modal img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer" class="pt-4 pb-4 mt-5">
+        <div class="container text-center text-xl-start">
+            <div class="row text-center text-xl-start">
+                <div class="col-md-6 col-xl-2 mx-auto mt-3">
+                    <h5 class="title-footer mb-4">Contáctanos</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <i class="fas fa-home me-3"></i>789 Avenida del Café, Distrito Barista, San Francisco, CA
+                        94103
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i>+1 415-555-1234
+                    </p>
+                    <p>
+                        <i class="fas fa-print me-3"></i>+1 415-555-5678
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>gsw@coffee.com
+                    </p>
+                </div>
+                <div class="col-md-6 col-xl-2 mx-auto mt-3">
+                    <h5 class="title-footer mb-4">Explora</h5>
+                    <hr class="mb-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#aboutUs">
+                                Sobre nosotros</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#services">
+                                Servicios</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#flavors">
+                                Perfiles
+                                de sabor</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#faq">
+                                Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xl-2 mx-auto mt-3">
+                    <h5 class="title-footer mb-4">Soporte</h5>
+                    <hr class="mb-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#faq">
+                                Preguntas frecuentes</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#">
+                                Contacto</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#"> Política
+                                de privacidad</a></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chevron-right"></i><a href="#"> Términos
+                                de Servicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xl-3 mx-auto mt-3">
+                    <h5 class="title-footer mb-4">Suscríbete</h5>
+                    <hr class="mb-4">
+                    <p>
+                        Mantente al
+                        día con nuevos sabores y ofertas exclusivas.
+                    </p>
+                    <form class="d-flex">
+                        <i class="far fa-envelope px-2"></i>
+                        <input type="email" placeholder="Introduce tu email aquí..." required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+                <p class="m-0">Copyright © 2024. All rights reserved.</p>
+            </div>
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Síguenos en Facebook" data-bs-custom-class="custom-tooltip-footer">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Síguenos en Instagram" data-bs-custom-class="custom-tooltip-footer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.youtube.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Suscríbete a nuestro canal de YouTube"
+                            data-bs-custom-class="custom-tooltip-footer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://es.linkedin.com/" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Conéctate con nosotros en LinkedIn"
+                            data-bs-custom-class="custom-tooltip-footer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- BOTÓN GOTOP -->
+    <div id="goTop">
+        <a href="#" id="goTopBtn"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
+</body>
+</html>
